@@ -1,0 +1,36 @@
+body {
+    background-color: #783c00;
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div {
+
+
+
+}
+/*{%  for row in gra.board %}*/
+/*        {% for field in row %}*/
+/*            <div>*/
+/*            <a href="{{ row, field }}">*/
+/*            elo </a>*/
+/*{#                {% if field == 'white' %}#}*/
+/*{#                     obrazek  white#}*/
+/*{#                {% endif %}#}*/
+/*{#            {% if field == 'black' %}#}*/
+/*{#                     obrazek  black#}*/
+/*{#                {% endif %}#}*/
+/*            </div>*/
+/*        {% endfor %}*/
+/*    {% endfor %}*/

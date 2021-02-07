@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/plansza.css">
+    <title>Plansza</title>
+</head>
+
+<body>
+<section>
+    {% for row in range(1,9) %}
+        {% for column in range(row) %}
+            {% for field in list_of_fields %}
+                {% if field.color == 'green' %}
+                    <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>
+                    {% else %}
+{#                    field.color == 'white'#}
+                     <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>
+                    {% endif %}
+
+
+{#                {{   field.x}} = {{row }}#}
+{#                {{   field.y}} = {{column }}#}
+{#            {% for x in pionki %}#}
+{#                {{ x.x }}#}
+{#                    {% if x.x == field.x and x.y == field.column %}#}
+
+{#                        {% if x.color == 'white' %}#}
+{#                           #}
+{#                            {% endif %}#}
+{#                    {% endif %}#}
+{#                    {% endfor %}#}
+
+{#                {% endif %}#}
+{#            {% for pawn in list_of_pawns %}#}
+{#               {% if row == pawn.x and column == pawn.y and pawn.color == 'white'%}#}
+{#                    {% if pawn.color == 'white' %}#}
+{#                        <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
+{#               {% else %}#}
+{#                 <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
+{#                   {% endif %}#}
+{##}
+{#               {% endif %}#}
+{#        {% else %}#}
+{#                {% endfor %}#}
+{#            <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
+{#            {% elif pawn.color == 'black'%}#}
+{#                <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
+{#                {% endif %}#}
+{#                    {% else %}#}
+{#                    <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
+
+{#{% endif %}#}
+{#{% endif %}#}
+
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+
+
+
+
+
+
+
+
+{#            <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
+
+{#            {% if row == 4 and column == 4 %}#}
+{#                <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
+{#                {% else %}#}
+{#                    {% if row == 4 and column == 5 %}#}
+{#                        <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
+{#                        {% else %}#}
+{#                            {% if row == 5 and column == 4 %}#}
+{#                                <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
+{#                                {% else %}#}
+{#                                    {% if row == 5 and column == 5 %}#}
+{#                                        <a href="{{ row }}/{{ column }}"> <img src="../static/bialy.jpg" alt="bialy"> </a>#}
+{#                                            {% else %}#}
+{#                                                <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
+{#                                    {% endif %}#}
+{#                            {% endif %}#}
+{#                    {% endif %}#}
+{#            {% endif %}#}
+
+
+{#            <a href="/moveto/{{row}}/{{ column }}"> <div>#}
+{#                TUTEJ#}
+{#            </div>  </a>#}
+{#    {% endfor %}#}
+{#{% endfor %}#}
+</section>
+<div>
+    {{ gracz1.name }}
+    {{ gracz2.name }}
+    {{ gracz1.pawn }}
+</div>
+
+
+</body>
+
+</html>

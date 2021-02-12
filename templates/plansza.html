@@ -3,23 +3,40 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../static/plansza.css">
     <title>Plansza</title>
 </head>
 
 <body>
 <section>
+{# {{ current_player}}#}
+{#{% if current_player == 1 %}#}
+{#    {{ temporary.field }}#}
+{#Teraz gra: {{ gracz_bialy.name }}#}
+{#    Pola: {{ gracz_bialy.field }}#}
+{#    {% else %}#}
+{#    Teraz gra {{ gracz_czarny.name }}#}
+{#    {{ gracz_czarny.field }}#}
+{#{% endif %}#}
     {% for row in range(1,9) %}
-        {% for column in range(row) %}
-            {% for field in list_of_fields %}
-                {% if field.color == 'green' %}
-                    <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>
-                    {% else %}
-{#                    field.color == 'white'#}
-                     <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>
-                    {% endif %}
+        {% for column in range(1,9) %}
+            {% if [row, column] in gracz_bialy.field %}
+                <a href="/moveto/{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>
 
+
+                {% elif [row, column] in gracz_czarny.field %}
+                    <a href="/moveto/{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>
+
+            {% else %}
+                <a href="/moveto/{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="zielony"></a>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{#{% endfor %}#}
+
+{#                {% endfor %}{##}
+
+{#{% endfor %}#}
 
 {#                {{   field.x}} = {{row }}#}
 {#                {{   field.y}} = {{column }}#}
@@ -47,7 +64,7 @@
 {#                {% endfor %}#}
 {#            <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
 {#            {% elif pawn.color == 'black'%}#}
-{#                <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
+
 {#                {% endif %}#}
 {#                    {% else %}#}
 {#                    <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
@@ -55,9 +72,13 @@
 {#{% endif %}#}
 {#{% endif %}#}
 
-                {% endfor %}
-            {% endfor %}
-        {% endfor %}
+{#                {% endfor %}#}
+{#            {% endfor %}#}
+{#        {% endfor %}#}
+
+{#{% if gracz_bialy.field[4] == row and gracz_bialy.field[4] == column %}#}
+{#            <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
+{#            {% endif %}#}
 
 
 
@@ -65,9 +86,7 @@
 
 
 
-
-{#            <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
-
+{##}
 {#            {% if row == 4 and column == 4 %}#}
 {#                <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
 {#                {% else %}#}
@@ -90,14 +109,13 @@
 {#            <a href="/moveto/{{row}}/{{ column }}"> <div>#}
 {#                TUTEJ#}
 {#            </div>  </a>#}
-{#    {% endfor %}#}
-{#{% endfor %}#}
-</section>
-<div>
-    {{ gracz1.name }}
-    {{ gracz2.name }}
-    {{ gracz1.pawn }}
-</div>
+
+{#</section>#}
+{#<div>#}
+{#    {{ gracz.name }}#}
+{#    {{ gracz2.name }}#}
+{#    {{ gracz1.pawn }}#}
+{#</div>#}
 
 
 </body>

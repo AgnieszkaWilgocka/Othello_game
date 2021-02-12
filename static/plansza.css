@@ -15,22 +15,4 @@ section {
     transform: translate(-50%, -50%);
 }
 
-div {
 
-
-
-}
-/*{%  for row in gra.board %}*/
-/*        {% for field in row %}*/
-/*            <div>*/
-/*            <a href="{{ row, field }}">*/
-/*            elo </a>*/
-/*{#                {% if field == 'white' %}#}*/
-/*{#                     obrazek  white#}*/
-/*{#                {% endif %}#}*/
-/*{#            {% if field == 'black' %}#}*/
-/*{#                     obrazek  black#}*/
-/*{#                {% endif %}#}*/
-/*            </div>*/
-/*        {% endfor %}*/
-/*    {% endfor %}*/

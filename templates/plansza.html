@@ -8,116 +8,45 @@
 </head>
 
 <body>
-<section>
-{# {{ current_player}}#}
-{#{% if current_player == 1 %}#}
-{#    {{ temporary.field }}#}
-{#Teraz gra: {{ gracz_bialy.name }}#}
-{#    Pola: {{ gracz_bialy.field }}#}
-{#    {% else %}#}
-{#    Teraz gra {{ gracz_czarny.name }}#}
-{#    {{ gracz_czarny.field }}#}
-{#{% endif %}#}
-    {% for row in range(1,9) %}
-        {% for column in range(1,9) %}
-            {% if [row, column] in gracz_bialy.field %}
-                <a href="/moveto/{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>
+    <div class="container_img">
+        <div class="nav_img">
+            <img class="img nav" src="../static/img_nav.png" alt="napis_othello">
+        </div>
+    </div>
 
+    <p class="score">{{ gracz_bialy.score }} : {{ gracz_czarny.score }}</p>
 
-                {% elif [row, column] in gracz_czarny.field %}
-                    <a href="/moveto/{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>
+    {% if current_player == 1 %}
+        <div class="view_player1">
+            <h2>Gracz: </h2>
+                <p class="nick_name1"> {{ gracz_bialy.name }}</p>
+            <h2>Punkty: </h2>
+            <p class="nick_name1"> {{ gracz_bialy.score }}</p>
+        </div>
 
-            {% else %}
-                <a href="/moveto/{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="zielony"></a>
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-{#{% endfor %}#}
+    {% else %}
+        <div class="view_player2">
+            <h2>Gracz: </h2>
+                <p class="nick_name2">{{ gracz_czarny.name }}</p>
+            <h2>Punkty: </h2>
+            <p class="nick_name2">{{ gracz_czarny.score }}</p>
+        </div>
+    {% endif %}
 
-{#                {% endfor %}{##}
-
-{#{% endfor %}#}
-
-{#                {{   field.x}} = {{row }}#}
-{#                {{   field.y}} = {{column }}#}
-{#            {% for x in pionki %}#}
-{#                {{ x.x }}#}
-{#                    {% if x.x == field.x and x.y == field.column %}#}
-
-{#                        {% if x.color == 'white' %}#}
-{#                           #}
-{#                            {% endif %}#}
-{#                    {% endif %}#}
-{#                    {% endfor %}#}
-
-{#                {% endif %}#}
-{#            {% for pawn in list_of_pawns %}#}
-{#               {% if row == pawn.x and column == pawn.y and pawn.color == 'white'%}#}
-{#                    {% if pawn.color == 'white' %}#}
-{#                        <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
-{#               {% else %}#}
-{#                 <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
-{#                   {% endif %}#}
-{##}
-{#               {% endif %}#}
-{#        {% else %}#}
-{#                {% endfor %}#}
-{#            <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
-{#            {% elif pawn.color == 'black'%}#}
-
-{#                {% endif %}#}
-{#                    {% else %}#}
-{#                    <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
-
-{#{% endif %}#}
-{#{% endif %}#}
-
-{#                {% endfor %}#}
-{#            {% endfor %}#}
-{#        {% endfor %}#}
-
-{#{% if gracz_bialy.field[4] == row and gracz_bialy.field[4] == column %}#}
-{#            <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
-{#            {% endif %}#}
-
-
-
-
-
-
-
-{##}
-{#            {% if row == 4 and column == 4 %}#}
-{#                <a href="{{ row }}/{{ column }}"> <img src ="../static/bialy.jpg" alt="bialy"> </a>#}
-{#                {% else %}#}
-{#                    {% if row == 4 and column == 5 %}#}
-{#                        <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
-{#                        {% else %}#}
-{#                            {% if row == 5 and column == 4 %}#}
-{#                                <a href="{{ row }}/{{ column }}"> <img src ="../static/czarny.jpg" alt="czarny"> </a>#}
-{#                                {% else %}#}
-{#                                    {% if row == 5 and column == 5 %}#}
-{#                                        <a href="{{ row }}/{{ column }}"> <img src="../static/bialy.jpg" alt="bialy"> </a>#}
-{#                                            {% else %}#}
-{#                                                <a href="{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="field"></a>#}
-{#                                    {% endif %}#}
-{#                            {% endif %}#}
-{#                    {% endif %}#}
-{#            {% endif %}#}
-
-
-{#            <a href="/moveto/{{row}}/{{ column }}"> <div>#}
-{#                TUTEJ#}
-{#            </div>  </a>#}
-
-{#</section>#}
-{#<div>#}
-{#    {{ gracz.name }}#}
-{#    {{ gracz2.name }}#}
-{#    {{ gracz1.pawn }}#}
-{#</div>#}
-
-
+    <div class="board">
+        <section>
+            {% for row in range(1,9) %}
+                {% for column in range(1,9) %}
+                    {% if [row, column] in gracz_bialy.field %}
+                        <img src ="../static/bialy.jpg" alt="bialy">
+                    {% elif [row, column] in gracz_czarny.field %}
+                        <img src ="../static/czarny.jpg" alt="czarny">
+                    {% else %}
+                        <a href="/moveto/{{row}}/{{ column }}"> <img src="../static/kk.jpg" alt="zielony"></a>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </section>
+    </div>
 </body>
-
 </html>

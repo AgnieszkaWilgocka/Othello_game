@@ -1,18 +1,69 @@
 body {
     background-color: #783c00;
-
 }
 
 section {
+
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
     width: 40vw;
     height: 40vw;
     position: absolute;
-    top: 50%;
+    padding: 20px;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.container_img {
+    text-align: center;
+}
+
+.nav_img {
+    display: inline-block;
+}
+
+.score {
+    color: #dd9a58;
+    font-family: 'Permanent Marker', cursive;
+    font-size:3.5vh;
+    text-align: center;
+}
+
+.view_player1, .view_player2 {
+    margin-top: 15%;
+    background-color: #783c00;
+    border-radius: 25px;
+    height: 30vh;
+    width: 25%;
+}
+
+.view_player1 {
+    -webkit-box-shadow: 5px 5px 15px 5px #fff;
+    box-shadow: 5px 5px 15px 5px #fff;
+}
+
+.view_player2 {
+    -webkit-box-shadow: 5px 5px 15px 5px #000;
+    box-shadow: 5px 5px 15px 5px #000;
+}
+
+.nick_name1 {
+    font-size: 2.5vh;
+    text-align: center;
+    color: white;
+}
+
+.nick_name2 {
+    font-size: 2.5vh;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-size: 4vh;
+    text-align: center;
+    color: #dd9a58;
+}
 

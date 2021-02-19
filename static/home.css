@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #783c00;
+}
+
+hr {
+    width: 50%;
+    margin: auto;
+    border-top: 1px solid #dd9a58;
+}
+
+.container_img {
+    text-align: center;
+}
+
+.nav_img {
+    display: inline-block;
+}
+
+nav li{
+    font-size: 20px;
+    border: solid 3px;
+    font-family: 'Ranchers', cursive;
+    list-style: none;
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dd9a58;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3vh;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+ .home {
+     width: 100%;
+     display: flex;
+ }
+
+ .home > div {
+     margin: 40px 1.5%;
+     width: 30%;
+     border: solid 1px;
+     background-color: #9f6e36;
+     border-radius: 20px;
+ }
+
+ .home > div > p {
+     color: black;
+     text-align: justify;
+     padding: 20px;
+     font-family: 'Brygada 1918', serif;
+ }
+
+ .home h2 {
+     color: whitesmoke;
+     text-align: center;
+     text-overflow: ellipsis;
+     padding: 5px;
+ }
+
+ strong {
+     color: brown;
+ }
+
+ .rules {
+     text-align: center;
+ }
+
+ .img1_rules, .img2_rules {
+     border-radius: 10px;
+     padding: 2%;
+     -webkit-box-shadow: 5px 5px 18px 5px #9F6E36;
+box-shadow: 5px 5px 18px 5px #9F6E36;
+ }
+
+ .p_rules {
+     font-size: 18px;
+     margin-left: 25%;
+     margin-right: 25%;
+     margin-bottom: 20px;
+     font-family: 'Brygada 1918', serif;
+ }
+
+ .rules h2 {
+     color: #dd9a58;
+     margin-top: 20px;
+ }
+ .container_form {
+     margin-top: 20px;
+     border-radius: 20px;
+     background-image: url("../static/bckgr.jpg");
+     margin-left: auto;
+     margin-right: auto;
+     width: 30%
+ }
+
+ .nick1, .nick2, .button_submit {
+     padding: 20px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+ }
+
+ input {
+     font-size: 15px;
+     font-family: 'Ranchers', cursive;
+     background-color: #dd9a58;
+     display: inline-block;
+     border-radius: 20px;
+     border-color: #783c00;
+     padding: 15px;
+ }
+
+ input:hover {
+     outline-style: none;
+     background-color: white;
+ }

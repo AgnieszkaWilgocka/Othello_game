@@ -3,17 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <title>CreatePlayer</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Ranchers&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@500&family=Libre+Baskerville:ital@0;1&family=Ranchers&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="container_img">
+<div class="nav_img">
+    <img class="img nav" src="../static/img_nav.png" alt="napis_othello">
+</div>
+</div>
+<nav>
+    <ul>
+        <li><a href="#section_home">Home</a></li>
+        <li><a href="#section_rules">Zasady gry</a></li>
+        <li><a href="#section_game">Graj</a></li>
+    </ul>
+</nav>
+<div class="container_board">
+<section id="section_home">
+<div class="home">
+{#    <h1>Othello</h1>#}
+    <div>
+    <h2>Charakterystyka</h2>
+    <p>Othello to gra dla dwóch osób. Jest znana od końca XVIII wieku, a w Europie zyskała popularność
+        w połowie XIX wieku.
+        Othello Należy do gier strategicznych, które charakteryzują się
+    dynamicznością zmian wyników oraz sytuacji na planszy.</p>
+    </div>
+    <div>
+    <h2>Cel gry</h2>
+    <p>Celem gry jest wypełnienie planszy większą liczbą swoich pionów niż przeciwnik.
+    Na pierwszy rzut oka może wydawać się to proste, jednak komplikacji dodają szybkie zmiany na planszy, powstające po każdym ruchu.
+        Ważniejsze niż teraźniejszy wynik jest myślenie perspektywiczne - prowadzenie można objąć nawet w ostatniej turze.
+    </p>
+    </div>
+    <div>
+    <h2>Rozgrywki</h2>
+    <p>Othello jest pełnoprawną grą, traktowaną jako sport umysłowy. Organizowane są coroczne turnieje, które wyłaniają
+    mistrzów. <strong>Aktualnym mistrzem świata</strong>
+    jest Japończyk - Akihiro Takahashi. Tabela rankingu światowego jest zdominowana właśnie przez
+    Japończyków, ale Polska również ma swoich reprezentantów. W 2018 roku byli to: <strong>Miłosz Cupiał</strong>,
+    <strong>Dominik Nowak</strong> oraz <strong>Paweł Pęczkowski</strong>.</p>
+    </div>
+</div>
+</section>
+</div>
+<hr>
+<section id="section_rules">
+<div class="rules">
+{#    <div class = "container1">#}
+{#    <div class="containter1_rules">#}
+    <h1>Zasady gry</h1>
+{#    <div class="p_rules">#}
+{#        <div class="img_rules">#}
+{#    <img src="../static/plansza_moja.png" alt="plansza" height="700" width="700">#}
+{#        </div>#}
+{#    </div>#}
+{#    </div>#}
+{#    <div class="p_rules">#}
+{#    <div class="border">#}
+    <h2>Przygotowanie</h2>
+{#        <div class="container1.1">#}
+    <p class="p_rules">Gra Othello rozgrywa się na zielonej planszy, złożoną z 64 pól (8x8). Gracze mają swoje piony - białe lub czarne.
+    Przed rozpoczęciem gry na planszy ułożone są po dwa piony od każdego gracza. Są one umiejscowione w centralnej części planszy,
+    tworząc tzw. szachownicę - jak widać na zdjęciu poniżej: </p>
+{#                </div></div>#}
+{#    </div>#}
+{#        <div class="img1_rules">#}
+        <img class="img1_rules" src="../static/plansza_moja.png" alt="plansza" width="600">
+{#        </div>#}
+{#    </div>#}
+
+{#    <div class="containter_img_rules">#}
+{#    <div class="img_rules">#}
+{#    <img src="../static/plansza_moja.png" alt="plansza" height="500" width="500">#}
+{#    </div>#}
+{#    </div>#}
+
+{#</div>#}
+
+{#<div class="przykladowy_ruch">#}
+{#        <img src="../static/przykladowy_ruch.png" alt="przykladowe bicie">#}
+{#    </div>#}
+{#    <div class="border">#}
+    <h2>Gra</h2>
+
+    <p class="p_rules">Turę rozpoczyna gracz biały. Następnie gracze wykonują ruchy na zmianę. Piony pozostają
+    nieruchome, ale mogą zmieniać swój kolor. <p class="p_rules"><strong>Uwaga: </strong> w tej wersji komputerowej - gracz, który postawi swój pion na polu
+    uniemożliwiającym <strong>bicie</strong>, traci swój ruch. Bicie odbywa sie przez postawienie piona w taki sposób,
+    aby pomiędzy nim oraz własnym innym pionem, znalazły się piony przeciwnika. Piony przeciwnika,
+    które znajdą się pomiędzy naszymi pionami - piony zbite - stają się naszymi pionami, zmieniając swój kolor.
+    Piony mogą być bite poziomo, pionowo lub skośnie.</p>
+    <p class="p_rules">Jeśli bicie jest możliwe w wielu kierunkach, następuje ono jednocześnie.
+        Przykładowe możliwości bicia pionów białych:</p>
+{#    </div>#}
+{#    <div class="img2_rules">#}
+        <img class="img2_rules" src="../static/przykladowy_ruch.png" alt="przykladowe bicie" height="600", width="600">
+{#    </div>#}
+    <h2>Koniec gry</h2>
+    <p class="p_rules">Koniec gry następuje po wypełnieniu się całej planszy pionami. Gra kończy się również
+    w przypadku, gdy jeden z graczy nie ma na planszy swoich pionów.</p>
+<hr>
+</div>
+</section>
+<section id="section_game">
+<div class="graj">
+    <h1>Zagraj teraz!</h1>
+
+<div class="container_form">
+<div class="form">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
-        <div>
+{#        <div class="containter_nick">#}
+        <div class="nick1">
             {{ form.nick1 }}
+        </div>
+        <div class="nick2">
             {{ form.nick2 }}
         </div>
-        <div>
+{#        </div>#}
+
+        <div class="button_submit">
             {{ form.submit }}
         </div>
     </form>
+</div>
+</div>
+</div>
+</section>
 </body>
 </html>

@@ -347,6 +347,10 @@ def end_game():
     return render_template('koniec_gry.html', winner=winner)
 
 
+# if __name__ == '__main__':
+#     app.run()
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=5131, debug=True)
+
 

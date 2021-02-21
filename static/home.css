@@ -132,9 +132,18 @@ box-shadow: 5px 5px 18px 5px #9F6E36;
      border-radius: 20px;
      border-color: #783c00;
      padding: 15px;
- }
+     /*color: #783c00;*/
+     color: #783c00;
+     letter-spacing: 1px;
 
+ }
+::-webkit-input-placeholder {
+    /*color: #783c00;*/
+    color: #9F6E36;
+}
  input:hover {
      outline-style: none;
      background-color: white;
+     transition: 0.4s;
  }
+

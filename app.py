@@ -351,6 +351,6 @@ def end_game():
 #     app.run()
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5131, debug=True)
+    app.run(host="0.0.0.0", port=5181, debug=True)
 
 
